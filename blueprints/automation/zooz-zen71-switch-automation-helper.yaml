@@ -10,7 +10,9 @@ blueprint:
         device:
           integration: zwave_js
           manufacturer: Zooz
-          model: ZEN71
+          filter:
+          - model: ZEN71
+          - model: ZEN71 800LR
     switch_up_1x:
       name: Top Paddle 1x
       description: 'Action to run on switch upper paddle single tap. Default: Turn
