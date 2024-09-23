@@ -105,6 +105,8 @@ blueprint:
   source_url: https://community.home-assistant.io/t/zooz-zen30-double-switch-automation-helper/281362
 mode: single
 max_exceeded: silent
+variables:
+  device_id: !input 'zooz_zen71'
 trigger:
 - platform: event
   event_type: zwave_js_value_notification
