@@ -1,6 +1,6 @@
 blueprint:
   name: Zooz ZEN71
-  description: BN Updates: Automations helper for the Zooz ZEN71 Switch using the Zwave JS integration.
+  description: BN Updates Automations helper for the Zooz ZEN71 Switch using the Zwave JS integration.
   domain: automation
   input:
     zooz_zen71:
