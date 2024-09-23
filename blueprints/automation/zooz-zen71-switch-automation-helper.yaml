@@ -1,6 +1,6 @@
 blueprint:
   name: Zooz ZEN71
-  description: BN Updates Automations helper for the Zooz ZEN71 Switch using the Zwave JS integration.
+  description: Automations helper for the Zooz ZEN71 Switch using the Zwave JS integration. Allows for multiple switches to be selected.
   domain: automation
   input:
     zooz_zen71:
@@ -102,7 +102,7 @@ blueprint:
       default: []
       selector:
         action: {}
-  source_url: https://github.com/b-neufeld/Home-AssistantConfig/blob/master/blueprints/automation/zooz-zen71-switch-automation-helper.yaml
+  source_url: https://github.com/austinmroczek/Home-AssistantConfig/blob/master/blueprints/automation/zooz-zen71-switch-automation-helper.yaml
 mode: single
 max_exceeded: silent
 variables:
