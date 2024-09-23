@@ -1,6 +1,6 @@
 blueprint:
   name: Zooz ZEN71
-  description: Automations helper for the Zooz ZEN71 Switch using the Zwave JS integration.
+  description: BN Updates: Automations helper for the Zooz ZEN71 Switch using the Zwave JS integration.
   domain: automation
   input:
     zooz_zen71:
@@ -102,7 +102,7 @@ blueprint:
       default: []
       selector:
         action: {}
-  source_url: https://community.home-assistant.io/t/zooz-zen30-double-switch-automation-helper/281362
+  source_url: https://github.com/b-neufeld/Home-AssistantConfig/blob/master/blueprints/automation/zooz-zen71-switch-automation-helper.yaml
 mode: single
 max_exceeded: silent
 variables:
@@ -110,9 +110,10 @@ variables:
 trigger:
 - platform: event
   event_type: zwave_js_value_notification
-  event_data:
-    command_class_name: Central Scene
-    device_id: !input 'zooz_zen71'
+  #event_data:
+  #  command_class_name: Central Scene
+  #  device_id: !input 'zooz_zen71'
+condition: '{{ trigger.event.data.device_id in device_id }}'
 action:
 - variables:
     scene_id: '{{ trigger.event.data.label }}'
